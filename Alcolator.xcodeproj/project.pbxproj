@@ -10,10 +10,10 @@
 		73F653BD1AA8AA8A00699B06 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 73F653BC1AA8AA8A00699B06 /* main.m */; };
 		73F653C01AA8AA8A00699B06 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 73F653BF1AA8AA8A00699B06 /* AppDelegate.m */; };
 		73F653C31AA8AA8A00699B06 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73F653C21AA8AA8A00699B06 /* ViewController.m */; };
-		73F653C61AA8AA8A00699B06 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73F653C41AA8AA8A00699B06 /* Main.storyboard */; };
 		73F653C81AA8AA8A00699B06 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73F653C71AA8AA8A00699B06 /* Images.xcassets */; };
 		73F653CB1AA8AA8A00699B06 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73F653C91AA8AA8A00699B06 /* LaunchScreen.xib */; };
 		73F653D71AA8AA8A00699B06 /* AlcolatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 73F653D61AA8AA8A00699B06 /* AlcolatorTests.m */; };
+		73F653E21AA8EEEE00699B06 /* WhiskeyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73F653E11AA8EEEE00699B06 /* WhiskeyViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,12 +34,13 @@
 		73F653BF1AA8AA8A00699B06 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		73F653C11AA8AA8A00699B06 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		73F653C21AA8AA8A00699B06 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		73F653C51AA8AA8A00699B06 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		73F653C71AA8AA8A00699B06 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		73F653CA1AA8AA8A00699B06 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		73F653D01AA8AA8A00699B06 /* AlcolatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlcolatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		73F653D51AA8AA8A00699B06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		73F653D61AA8AA8A00699B06 /* AlcolatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlcolatorTests.m; sourceTree = "<group>"; };
+		73F653E01AA8EEEE00699B06 /* WhiskeyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WhiskeyViewController.h; sourceTree = "<group>"; };
+		73F653E11AA8EEEE00699B06 /* WhiskeyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WhiskeyViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,10 +86,11 @@
 				73F653BF1AA8AA8A00699B06 /* AppDelegate.m */,
 				73F653C11AA8AA8A00699B06 /* ViewController.h */,
 				73F653C21AA8AA8A00699B06 /* ViewController.m */,
-				73F653C41AA8AA8A00699B06 /* Main.storyboard */,
 				73F653C71AA8AA8A00699B06 /* Images.xcassets */,
 				73F653C91AA8AA8A00699B06 /* LaunchScreen.xib */,
 				73F653BA1AA8AA8A00699B06 /* Supporting Files */,
+				73F653E01AA8EEEE00699B06 /* WhiskeyViewController.h */,
+				73F653E11AA8EEEE00699B06 /* WhiskeyViewController.m */,
 			);
 			path = Alcolator;
 			sourceTree = "<group>";
@@ -199,7 +201,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				73F653C61AA8AA8A00699B06 /* Main.storyboard in Resources */,
 				73F653CB1AA8AA8A00699B06 /* LaunchScreen.xib in Resources */,
 				73F653C81AA8AA8A00699B06 /* Images.xcassets in Resources */,
 			);
@@ -220,6 +221,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				73F653C31AA8AA8A00699B06 /* ViewController.m in Sources */,
+				73F653E21AA8EEEE00699B06 /* WhiskeyViewController.m in Sources */,
 				73F653C01AA8AA8A00699B06 /* AppDelegate.m in Sources */,
 				73F653BD1AA8AA8A00699B06 /* main.m in Sources */,
 			);
@@ -244,14 +246,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		73F653C41AA8AA8A00699B06 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				73F653C51AA8AA8A00699B06 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		73F653C91AA8AA8A00699B06 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -346,6 +340,7 @@
 				INFOPLIST_FILE = Alcolator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -356,6 +351,7 @@
 				INFOPLIST_FILE = Alcolator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
