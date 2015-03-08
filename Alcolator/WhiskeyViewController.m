@@ -14,11 +14,29 @@
 
 @implementation WhiskeyViewController
 
+-(void) viewDidLoad {
+    [super viewDidLoad];
+    
+    //set title for navigation
+    //self.title = NSLocalizedString(@"Whiskey", @"Whiskey");
+    self.title = [NSString stringWithFormat:@"Whiskey (%.1f beers)",self.beerCountSlider.value];
+}
+
+- (void)sliderValueDidChange:(UISlider *)sender {
+    
+    //Display beerCountSlider value in sliderValueLabel in realtime
+    self.sliderValueLabel.text = [NSString stringWithFormat:@"%.1f",sender.value];
+    
+    self.title = [NSString stringWithFormat:@"Whiskey (%.1f beers)",sender.value];
+    NSLog(@"Slider value changed to %f0", sender.value);
+    [self.beerPecentTextField resignFirstResponder];
+}
+
 -(void)buttonPressed:(UIButton *)sender;
 {
     [self.beerPecentTextField resignFirstResponder];
     
-    int numberOfBeers = self.beerCountSlider.value;
+    float numberOfBeers = self.beerCountSlider.value;
     int ouncesInOneBeerGlass = 12;
     
     float alcoholPercentageOfBeer = [self.beerPecentTextField.text floatValue] / 100;
@@ -49,7 +67,7 @@
         whiskeyText = NSLocalizedString(@"shots", @"plural of shots");
     }
     
-    NSString *resultText = [NSString stringWithFormat:NSLocalizedString(@"%d %@ contains as much alcohol as %.1f %@ of whiskey.", nil), numberOfBeers, beerText, numberOfWhiskeyGlassesForEquivalentAlcoholAmount, whiskeyText];
+    NSString *resultText = [NSString stringWithFormat:NSLocalizedString(@"%.1f %@ contains as much alcohol as %.1f %@ of whiskey.", nil), numberOfBeers, beerText, numberOfWhiskeyGlassesForEquivalentAlcoholAmount, whiskeyText];
     self.resultLabel.text = resultText;
 }
 

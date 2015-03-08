@@ -9,12 +9,8 @@
 #import "ViewController.h"
 
 @interface ViewController () <UITextFieldDelegate>
-@property (weak, nonatomic) UILabel *sliderValueLabel; //added in my assignment, not part of code in lesson
 @property (weak, nonatomic) UIButton *calculateButton;
 @property (weak, nonatomic) UITapGestureRecognizer *hideKeyboardTapGestureRecognizer;
-
-//property to autoresize the layouts
-@property(nonatomic) BOOL autoresizesSubviews;
 
 @end
 
@@ -106,6 +102,10 @@
     //Gets rid of the maximum number of lines on the label
     self.resultLabel.numberOfLines = 0;
     
+    //set the title for the navigation
+    //self.title = NSLocalizedString(@"Wine", @"Wine");
+    self.title = [NSString stringWithFormat:@"Wine (%.1f beers)",self.beerCountSlider.value];
+    
 }
 
 - (void) viewWillLayoutSubviews {
@@ -153,6 +153,7 @@
     //Display beerCountSlider value in sliderValueLabel in realtime
     self.sliderValueLabel.text = [NSString stringWithFormat:@"%.1f",sender.value];
     
+    self.title = [NSString stringWithFormat:@"Wine (%.1f beers)",sender.value];
     NSLog(@"Slider value changed to %f0", sender.value);
     [self.beerPecentTextField resignFirstResponder];
 }

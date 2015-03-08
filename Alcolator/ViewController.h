@@ -13,6 +13,7 @@
 @property (weak, nonatomic) UITextField *beerPecentTextField;
 @property (weak, nonatomic) UILabel *resultLabel;
 @property (weak, nonatomic) UISlider *beerCountSlider;
+@property (weak, nonatomic) UILabel *sliderValueLabel; //added in my assignment, not part of code in lesson
 
 -(void)buttonPressed:(UIButton *)sender;
 
