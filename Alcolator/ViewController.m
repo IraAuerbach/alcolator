@@ -16,6 +16,18 @@
 
 @implementation ViewController
 
+
+-(instancetype) init {
+    self = [super init];
+    
+    if (self) {
+        self.title = NSLocalizedString(@"Wine", @"Wine");
+        [self.tabBarItem setTitlePositionAdjustment:UIOffsetMake(0,-18)];
+    }
+    
+    return self;
+}
+
 - (void)loadView {
     //allocate and initialize the all-encompassing view
     self.view = [[UIView alloc] init];
@@ -105,6 +117,7 @@
     //set the title for the navigation
     //self.title = NSLocalizedString(@"Wine", @"Wine");
     self.title = [NSString stringWithFormat:@"Wine (%.1f beers)",self.beerCountSlider.value];
+    self.view.backgroundColor = [UIColor colorWithRed:.741 green:.925 blue:.714 alpha:1];
     
 }
 
@@ -114,9 +127,9 @@
     //CGFloat viewWidth = 320;
     CGFloat viewWidth = [UIScreen mainScreen].bounds.size.width;
     CGFloat viewHeight = [UIScreen mainScreen].bounds.size.height;
-    CGFloat padding = viewHeight / 20;
+    CGFloat padding = viewHeight / 25;
     CGFloat itemWidth = viewWidth - padding - padding;
-    CGFloat itemHeight = viewHeight / 10;
+    CGFloat itemHeight = viewHeight / 15;
     //CGFloat itemHeight = 44;
     
     self.beerPecentTextField.frame = CGRectMake(padding, padding*2, itemWidth, itemHeight);
@@ -156,6 +169,7 @@
     self.title = [NSString stringWithFormat:@"Wine (%.1f beers)",sender.value];
     NSLog(@"Slider value changed to %f0", sender.value);
     [self.beerPecentTextField resignFirstResponder];
+    //[self.tabBarItem setBadgeValue:[NSString stringWithFormat:@"%.1f", (float) sender.value]]; //Red Badge in the tab window
 }
 - (void)buttonPressed:(UIButton *)sender {
     [self.beerPecentTextField resignFirstResponder];

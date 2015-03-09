@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate, UITabBarControllerDelegate> //declares that AppDelegate conforms to the UITabBarControllerDelegate protocols
 
 @property (strong, nonatomic) UIWindow *window;
 

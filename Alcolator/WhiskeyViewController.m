@@ -14,12 +14,23 @@
 
 @implementation WhiskeyViewController
 
+-(instancetype) init {
+    self = [super init];
+    
+    if (self) {
+        self.title = NSLocalizedString(@"Whiskey", nil);
+    }
+    
+    return self;
+}
+
 -(void) viewDidLoad {
     [super viewDidLoad];
     
     //set title for navigation
     //self.title = NSLocalizedString(@"Whiskey", @"Whiskey");
     self.title = [NSString stringWithFormat:@"Whiskey (%.1f beers)",self.beerCountSlider.value];
+    self.view.backgroundColor = [UIColor colorWithRed:.992 green:.992 blue:.588 alpha:1];
 }
 
 - (void)sliderValueDidChange:(UISlider *)sender {
